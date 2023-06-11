@@ -29,7 +29,7 @@ local DaHoodSettings = {
 
     AimLock = false,
 
-    Prediction = 0.07,
+    Prediction = 0.131,
 
     AimLockKeybind = Enum.KeyCode.E,
 
@@ -38,7 +38,7 @@ local DaHoodSettings = {
 }
 --------------------------------------------------
 getgenv().DaHoodSettings = DaHoodSettings        
-getgenv().Aiming.FOV = 10                       
+getgenv().Aiming.FOV = 5.5                       
 --------------------------------------------------- -fov 5.5-6.6 is legit
 
 function Aiming.Check()
