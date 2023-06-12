@@ -37,6 +37,7 @@ local tableinsert = table.insert
 getgenv().Aiming = {
     Enabled = true,
     AntiCurve = true,
+    AutoPrediction = true,
     ShowFOV = false,
     FOV = 5.5,
     FOVSides = 300,
@@ -433,8 +434,21 @@ Heartbeat:Connect(function()
     Aiming.UpdateFOV()
     Aiming.GetClosestPlayerToCursor()
 end)
+-------------------------------------------------------------------------------------
 
--- i added
+
+
+
+
+-- // EXTRAS
+
+
+
+
+
+
+
+-- // ANTI CURVE ( this script makes silent aim dont curve. )
 if Aiming.AntiCurve == true then
     
         local args = {
@@ -447,8 +461,6 @@ if Aiming.AntiCurve == true then
 
     game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
 end
-
---
 
 -- //
 return Aiming
