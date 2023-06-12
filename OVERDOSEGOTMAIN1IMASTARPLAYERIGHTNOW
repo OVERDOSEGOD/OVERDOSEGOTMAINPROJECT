@@ -26,6 +26,8 @@ local CurrentCamera = Workspace.CurrentCamera
 local DaHoodSettings = {
     
     SilentAim = true,
+    
+    AutoPrediction = true,
 
     AimLock = false,
 
@@ -109,6 +111,64 @@ __index = hookmetamethod(game, "__index", function(t, k)
 
 end)
 
+-- // AutoPrediction
+while DaHoodSettings.AutoPrediction == true do
+    local ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
+    local pingValue = string.split(ping, " ")[1]
+    local pingNumber = tonumber(pingValue)
+   
+    if pingNumber < 30 then
+        DaHoodSettings.Prediction = 0.12588
+    elseif pingNumber < 40 then
+        DaHoodSettings.Prediction = 0.119
+    elseif pingNumber < 50 then
+        DaHoodSettings.Prediction = 0.1247
+    elseif pingNumber < 60 then
+        DaHoodSettings.Prediction = 0.127668
+    elseif pingNumber < 70 then
+        DaHoodSettings.Prediction = 0.12731
+    elseif pingNumber < 80 then
+        DaHoodSettings.Prediction = 0.12951
+    elseif pingNumber < 90 then
+        DaHoodSettings.Prediction = 0.1318
+    elseif pingNumber < 100 then
+        DaHoodSettings.Prediction = 0.1357
+    elseif pingNumber < 110 then
+        DaHoodSettings.Prediction = 0.133340
+         elseif pingNumber < 120 then
+        DaHoodSettings.Prediction = 0.1455
+         elseif pingNumber < 130 then
+        DaHoodSettings.Prediction = 0.143765
+         elseif pingNumber < 140 then
+        DaHoodSettings.Prediction = 0.156692
+         elseif pingNumber < 150 then
+        DaHoodSettings.Prediction = 0.1223333
+         elseif pingNumber < 160 then
+        DaHoodSettings.Prediction = 0.1521
+        elseif pingNumber < 170 then
+        DaHoodSettings.Prediction = 0.1626
+        elseif pingNumber < 180 then
+        DaHoodSettings.Prediction = 0.1923111
+        elseif pingNumber < 190 then
+        DaHoodSettings.Prediction = 0.19284
+        elseif pingNumber < 200 then
+        DaHoodSettings.Prediction = 0.166547
+        elseif pingNumber < 210 then
+        DaHoodSettings.Prediction = 0.16942
+        elseif pingNumber < 260 then
+        DaHoodSettings.Prediction = 0.1651
+        elseif pingNumber < 310 then
+        DaHoodSettings.Prediction = 0.16780
+	end
+ 
+    wait(0.1)
+end
+
+
+
+
+
+
 
 
 RunService:BindToRenderStep("AimLock", 0, function()
@@ -123,6 +183,31 @@ RunService:BindToRenderStep("AimLock", 0, function()
 
     end
 end)
+
+
+
+
+
+--
+--
+--         _____
+--        /$$$$$\      _____    _____
+--       |$$$$$$$|    /$$$$$|  |$$$$$\
+--       |$$$$$$$|   |$$$$$$|  |$$$$$$|
+--       |$$$$$$$|   |$$$$$$|  |$$$$$$|
+--       |$$$$$$$|   |$$$$$$|  |$$$$$$|
+--       |$$$$$$$|   |$$$$$$|  |$$$$$$|
+--       |$$$$$$$|   |$$$$$$|  |$$$$$$|
+-- _______$$$$$$$|   |$$$$$$|__|$$$$$$|
+--/$$$$$$$$$$$$$/    |$$$$$$$$$$$$$$$$|
+--|$$$$$$$$$$$$/     |$$$$$$$$$$$$$$$$|
+--|$$$$$$$$$$$/      |$$$$$$$$$$$$$$$$|
+--\__________/       \________________/
+--
+--
+
+
+
 --                    $$\                               $$\   $$\                                           $$\           
 --                    \__|                              $$ |  $$ |                                          $$ |          
 -- $$$$$$\   $$$$$$\  $$\ $$$$$$\$$$$\   $$$$$$\        \$$\ $$  |      $$$$$$$$\  $$$$$$\  $$$$$$$\   $$$$$$$ | $$$$$$\  
