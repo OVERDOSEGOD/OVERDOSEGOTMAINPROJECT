@@ -470,7 +470,7 @@ if Aiming.AntiCurve == true then
 end
 
 
-------------------------------------------------------
+--[[
 local AirshotFunccc = true
 local LCLR = Aiming.GetClosestPlayerToCursor
 local PredictionLP = 0.1
@@ -488,7 +488,7 @@ for _ ,v in pairs(Players:GetPlayers()) do
          end
       end
 end
-		
+--]]		
 		
 	
 
