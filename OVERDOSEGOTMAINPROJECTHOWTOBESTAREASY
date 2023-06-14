@@ -469,5 +469,38 @@ if Aiming.AntiCurve == true then
     game:GetService("ReplicatedStorage").MainEvent:FireServer(unpack(args))
 end
 
+
+--// DAMN
+
+
+-- Variables
+local Players, Client, Mouse, RS, Camera, gameid =
+	game:GetService("Players"),
+game:GetService("Players").LocalPlayer,
+game:GetService("Players").LocalPlayer:GetMouse(),
+game:GetService("RunService"),
+game.Workspace.CurrentCamera,
+game.PlaceId
+local AirshotFunccc = true
+local getgenv().AirshotFunccc = AirshotFunccc
+local LCLR = Aiming.ClosestPlayerFromMouse
+local PredictionLP = 0.1
+
+ClosestPlayerFromMouse = function()
+
+	if getgenv().AirshotFunccc == true then
+		if LCLR.Character.Humanoid.Jump == true and LCLR.Character.Humanoid.FloorMaterial == Enum.Material.Air then
+for _ ,v in pairs(Players:GetPlayers()) do
+	if (v.Character and v ~= Client and v.Character:FindFirstChild("HumanoidRootPart")) then
+		game.Players.LocalPlayer.Camera.CFrame = CFrame.new(LCLR.Character.HumanoidRootPart.Velocity * PredictionLP)
+	else
+		return end
+	end
+	
+end
+
+---------------------------------
+
+
 -- //
 return Aiming
