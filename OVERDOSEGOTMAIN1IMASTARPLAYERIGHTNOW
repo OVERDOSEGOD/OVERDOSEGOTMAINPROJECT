@@ -122,47 +122,47 @@ while DaHoodSettings.AutoPrediction == true do
     local pingNumber = tonumber(pingValue)
    
     if pingNumber < 30 then
-        DaHoodSettings.Prediction = 0.12588
+        DaHoodSettings.Prediction = 0.08
     elseif pingNumber < 40 then
-        DaHoodSettings.Prediction = 0.119
+        DaHoodSettings.Prediction = 0.084
     elseif pingNumber < 50 then
-        DaHoodSettings.Prediction = 0.1247
+        DaHoodSettings.Prediction = 0.095
     elseif pingNumber < 60 then
-        DaHoodSettings.Prediction = 0.127668
+        DaHoodSettings.Prediction = 0.1
     elseif pingNumber < 70 then
-        DaHoodSettings.Prediction = 0.12731
+        DaHoodSettings.Prediction = 0.11
     elseif pingNumber < 80 then
-        DaHoodSettings.Prediction = 0.12951
+        DaHoodSettings.Prediction = 0.114
     elseif pingNumber < 90 then
-        DaHoodSettings.Prediction = 0.1318
+        DaHoodSettings.Prediction = 0.117
     elseif pingNumber < 100 then
-        DaHoodSettings.Prediction = 0.1357
+        DaHoodSettings.Prediction = 0.12
     elseif pingNumber < 110 then
-        DaHoodSettings.Prediction = 0.133340
+        DaHoodSettings.Prediction = 0.122
          elseif pingNumber < 120 then
-        DaHoodSettings.Prediction = 0.1455
+        DaHoodSettings.Prediction = 0.129
          elseif pingNumber < 130 then
-        DaHoodSettings.Prediction = 0.143765
+        DaHoodSettings.Prediction = 0.133
          elseif pingNumber < 140 then
-        DaHoodSettings.Prediction = 0.156692
+        DaHoodSettings.Prediction = 0.138
          elseif pingNumber < 150 then
-        DaHoodSettings.Prediction = 0.1223333
+        DaHoodSettings.Prediction = 0.14
          elseif pingNumber < 160 then
-        DaHoodSettings.Prediction = 0.1521
+        DaHoodSettings.Prediction = 0.145
         elseif pingNumber < 170 then
-        DaHoodSettings.Prediction = 0.1626
+        DaHoodSettings.Prediction = 0.145
         elseif pingNumber < 180 then
-        DaHoodSettings.Prediction = 0.1923111
+        DaHoodSettings.Prediction = 0.145
         elseif pingNumber < 190 then
-        DaHoodSettings.Prediction = 0.19284
+        DaHoodSettings.Prediction = 0.145
         elseif pingNumber < 200 then
-        DaHoodSettings.Prediction = 0.166547
+        DaHoodSettings.Prediction = 0.145
         elseif pingNumber < 210 then
-        DaHoodSettings.Prediction = 0.16942
+        DaHoodSettings.Prediction = 0.145
         elseif pingNumber < 260 then
-        DaHoodSettings.Prediction = 0.1651
+        DaHoodSettings.Prediction = 0.145
         elseif pingNumber < 310 then
-        DaHoodSettings.Prediction = 0.16780
+        DaHoodSettings.Prediction = 0.145
 	end
  
     wait(0.1)
